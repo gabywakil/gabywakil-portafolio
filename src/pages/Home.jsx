@@ -1,3 +1,4 @@
+import useScrollReveal from '../hooks/useScrollReveal';
 import Hero from '../components/sections/Hero';
 import MarqueeTape from '../components/sections/MarqueeTape';
 import About from '../components/sections/About';
@@ -9,6 +10,7 @@ import Testimonials from '../components/sections/Testimonials';
 import Contact from '../components/sections/Contact';
 
 export default function Home() {
+  useScrollReveal();
   return (
     <>
       <Hero />
