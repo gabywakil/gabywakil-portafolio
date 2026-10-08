@@ -1,27 +1,85 @@
-import useScrollReveal from '../hooks/useScrollReveal';
-import Hero from '../components/sections/Hero';
-import MarqueeTape from '../components/sections/MarqueeTape';
-import About from '../components/sections/About';
-import Skills from '../components/sections/Skills';
-import Belt from '../components/sections/Belt';
-import Projects from '../components/sections/Projects';
-import OutlineBand from '../components/sections/OutlineBand';
-import Testimonials from '../components/sections/Testimonials';
-import Contact from '../components/sections/Contact';
+import Ph from '../ui/Ph';
+import Sticker from '../ui/Sticker';
 
-export default function Home() {
-  useScrollReveal();
+export default function Hero() {
   return (
-    <>
-      <Hero />
-      <MarqueeTape />
-      <About />
-      <Skills />
-      <Belt />
-      <Projects />
-      <OutlineBand />
-      <Testimonials />
-      <Contact />
-    </>
+    <section className="hero2 dark" id="inicio">
+      <div className="decor" aria-hidden="true">
+        <Sticker kind="hr" anim={3} style={{ left: "2%", top: "16%", "--sz": "80px" }} />
+        <Sticker kind="dc" anim={2} style={{ right: "3%", top: "12%", "--sz": "130px" }} />
+        <Sticker kind="ch" anim={1} style={{ right: "4%", bottom: "6%", "--sz": "115px" }} />
+        <Sticker kind="hp" anim={1} style={{ left: "4%", bottom: "7%", "--sz": "90px" }} />
+        <Sticker kind="sp" anim={5} style={{ left: "47%", top: "20%", "--sz": "54px" }} />
+        <Sticker kind="sr" anim={5} style={{ left: "42%", bottom: "9%", "--sz": "50px" }} />
+      </div>
+      <div className="wrap">
+        <span className="tag">{"UX/UI & PRODUCT DESIGN PORTFOLIO"}</span>
+        <h1 aria-label="Gabriella Wakil">
+          <span style={{ "--i": "1" }}>Gabriella</span>
+          {" "}
+          <em>
+            <span style={{ "--i": "2" }}>Wakil</span>
+          </em>
+        </h1>
+        <div className="canvas">
+          <aside className="win code" style={{ "--fx": "-90px" }}>
+            <div className="bar">
+              <i />
+              <i />
+              <i />
+              <span>portfolio.css</span>
+            </div>
+            <div className="lines">
+              <p style={{ "--n": "1", "--w": "7ch" }}>{".gaby {"}</p>
+              <p style={{ "--n": "2", "--w": "16ch" }}>{" design: figma;"}</p>
+              <p style={{ "--n": "3", "--w": "14ch" }}>{" code: react;"}</p>
+              <p style={{ "--n": "4", "--w": "17ch" }}>{" where: \"Bogotá\";"}</p>
+              <p style={{ "--n": "5", "--w": "11ch" }}>{" meets: ✦;"}</p>
+              <p style={{ "--n": "6", "--w": "1ch" }}>{"}"}</p>
+            </div>
+          </aside>
+          <div className="frame-wrap">
+            <span className="lbl">retrato</span>
+            <div className="frame">
+              <b className="hd h1" />
+              <b className="hd h2" />
+              <b className="hd h3" />
+              <b className="hd h4" />
+              <Ph label="FOTO: retrato de Gaby" src="" className="arch" />
+            </div>
+            <span className="arrow" style={{ left: "-4%", top: "24%" }} aria-hidden="true">↘</span>
+            <span className="arrow" style={{ right: "-4%", bottom: "22%", rotate: "180deg" }} aria-hidden="true">↘</span>
+            <span className="cur c1" aria-hidden="true">Gaby</span>
+            <span className="cur c2" aria-hidden="true">código</span>
+          </div>
+          <aside className="win pal" style={{ "--fx": "90px" }}>
+            <div className="bar">
+              <i />
+              <i />
+              <i />
+              <span>estilos</span>
+            </div>
+            <div className="sw">
+              <i style={{ background: "#021B2C", "--d": "0.0s" }} title="#021B2C" />
+              <i style={{ background: "#E2D8CB", "--d": "0.15s" }} title="#E2D8CB" />
+              <i style={{ background: "#022E4A", "--d": "0.3s" }} title="#022E4A" />
+              <i style={{ background: "#56061D", "--d": "0.44999999999999996s" }} title="#56061D" />
+              <i style={{ background: "#507593", "--d": "0.6s" }} title="#507593" />
+              <i style={{ background: "#A9C3D8", "--d": "0.75s" }} title="#A9C3D8" />
+            </div>
+            <div className="spec">
+              <b className="s1">Aa</b>
+              <b className="s2">Aa</b>
+              <b className="s3">Aa</b>
+            </div>
+          </aside>
+        </div>
+        <p className="sub">Estudiante de Ingeniería en Sistemas — Bogotá, Colombia</p>
+        <div className="cta">
+          <p className="script">Where design meets code</p>
+          <a className="btn" href="#proyectos">Ver proyectos</a>
+        </div>
+      </div>
+    </section>
   );
 }
