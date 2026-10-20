@@ -1,8 +1,12 @@
-// Marco de imagen. Sin "src" muestra el placeholder con su etiqueta.
+import { useState } from 'react';
+
+// Marco de imagen. Sin "src" (o si la imagen no existe todavía) muestra el placeholder con su etiqueta.
 // Con "src" la imagen se puede ampliar (lightbox) con clic o Enter.
 // pos = object-position (ej. "top"), className "nat" = respeta la proporción real de la imagen.
 export default function Ph({ label, src, alt, className = '', style, pos }) {
-  if (!src) {
+  const [broken, setBroken] = useState(false);
+
+  if (!src || broken) {
     return (
       <figure className={`ph ${className}`.trim()} style={style}>
         <figcaption>{label}</figcaption>
@@ -18,7 +22,14 @@ export default function Ph({ label, src, alt, className = '', style, pos }) {
       aria-label={`Ampliar: ${alt || label}`}
       data-zoom
     >
-      <img src={src} alt={alt || label} loading="lazy" decoding="async" style={pos ? { objectPosition: pos } : undefined} />
+      <img
+        src={src}
+        alt={alt || label}
+        loading="lazy"
+        decoding="async"
+        style={pos ? { objectPosition: pos } : undefined}
+        onError={() => setBroken(true)}
+      />
     </figure>
   );
 }

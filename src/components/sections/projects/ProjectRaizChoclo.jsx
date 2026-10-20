@@ -6,7 +6,7 @@ const FLOWS = ['Entrada a la app', 'Home y búsqueda', 'Producto y pedido', 'Per
 export default function ProjectRaizChoclo() {
   return (
     <article className="proj" id="p-raiz-choclo">
-      <span className="num">04</span>
+      <span className="num">06</span>
       <span className="tag">PROTOTIPOS EN FIGMA</span>
       <h3>
         {"Raíz "}

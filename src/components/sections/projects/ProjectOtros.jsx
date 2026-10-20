@@ -4,7 +4,7 @@ import { img } from '../../../utils/img';
 export default function ProjectOtros() {
   return (
     <article className="proj" id="p-otros">
-      <span className="num">09</span>
+      <span className="num">12</span>
       <span className="tag">OTROS PROYECTOS</span>
       <h3>
         {"Otros "}

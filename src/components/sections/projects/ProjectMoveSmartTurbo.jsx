@@ -4,7 +4,7 @@ import { img } from '../../../utils/img';
 export default function ProjectMoveSmartTurbo() {
   return (
     <article className="proj" id="p-movesmart">
-      <span className="num">05</span>
+      <span className="num">07</span>
       <span className="tag">PROYECTOS UNIVERSITARIOS</span>
       <h3>
         {"MoveSmart "}

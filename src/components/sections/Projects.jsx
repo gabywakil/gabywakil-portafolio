@@ -3,6 +3,9 @@ import ProjectIndex from './ProjectIndex';
 import ProjectTepuy from './projects/ProjectTepuy';
 import ProjectFoodik from './projects/ProjectFoodik';
 import ProjectEmpaticas from './projects/ProjectEmpaticas';
+import ProjectEmpaticasWeb from './projects/ProjectEmpaticasWeb';
+import ProjectLumoBot from './projects/ProjectLumoBot';
+import ProjectGWStudios from './projects/ProjectGWStudios';
 import ProjectRaizChoclo from './projects/ProjectRaizChoclo';
 import ProjectMoveSmartTurbo from './projects/ProjectMoveSmartTurbo';
 import ProjectConMariaBonita from './projects/ProjectConMariaBonita';
@@ -28,10 +31,13 @@ export default function Projects() {
         <ProjectTepuy />
         <ProjectFoodik />
         <ProjectEmpaticas />
+        <ProjectEmpaticasWeb />
+        <ProjectLumoBot />
         <ProjectRaizChoclo />
         <ProjectMoveSmartTurbo />
         <ProjectConMariaBonita />
         <ProjectByAlexandra />
+        <ProjectGWStudios />
         <ProjectRedes />
         <ProjectOtros />
       </div>

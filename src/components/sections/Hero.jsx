@@ -80,7 +80,7 @@ export default function Hero() {
           </div>
         </div>
         <ul className="facts" aria-label="En resumen">
-          <li><b>09</b><span>proyectos en este portafolio</span></li>
+          <li><b>12</b><span>proyectos en este portafolio</span></li>
           <li><b>UX/UI</b><span>diseño de producto e interfaces</span></li>
           <li><b>React</b><span>desarrollo front-end</span></li>
           <li><b>BOG</b><span>Bogotá, Colombia</span></li>

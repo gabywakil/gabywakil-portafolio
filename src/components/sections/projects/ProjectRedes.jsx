@@ -4,7 +4,7 @@ import { img } from '../../../utils/img';
 export default function ProjectRedes() {
   return (
     <article className="proj" id="p-redes">
-      <span className="num">08</span>
+      <span className="num">11</span>
       <span className="tag">DISEÑO PARA REDES SOCIALES</span>
       <h3>
         {"Contenido que "}

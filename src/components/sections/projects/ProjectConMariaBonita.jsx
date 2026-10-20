@@ -4,7 +4,7 @@ import { img } from '../../../utils/img';
 export default function ProjectConMariaBonita() {
   return (
     <article className="proj" id="p-conmariabonita">
-      <span className="num">06</span>
+      <span className="num">08</span>
       <span className="tag">CASO DE ESTUDIO · FREELANCE</span>
       <h3>
         {"Con María "}
