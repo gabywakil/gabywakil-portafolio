@@ -1,9 +1,11 @@
 import Ph from '../../ui/Ph';
+import { img } from '../../../utils/img';
 
 export default function ProjectEmpaticas() {
   return (
-    <article className="proj rv">
+    <article className="proj" id="p-empaticas">
       <span className="num">03</span>
+      <span className="tag">CASO DE ESTUDIO</span>
       <h3>
         Em
         <em>páticas</em>
@@ -11,15 +13,15 @@ export default function ProjectEmpaticas() {
       <span className="tagline">IDENTIDAD VISUAL DE MARCA + SITIO WEB</span>
       <p className="txt">Desarrollo de identidad visual de marca y sitio web, enfocada en bienestar, eventos y salud mental.</p>
       <div className="split">
-        <div className="grid" style={{ gridTemplateColumns: "1fr 1fr" }}>
-          <Ph label="LOGO: Empáticas" src="" className="circle" />
-          <Ph label="BANNER: evento" src="" className="oval" />
+        <div className="grid brand-row">
+          <Ph label="Empáticas — Logotipo" src={img('empaticas/logo.jpg')} className="round brand-logo" />
+          <Ph label="Empáticas — Banner del evento" src={img('empaticas/banner.jpg')} className="round brand-banner" />
         </div>
         <div className="grid g4">
-          <Ph label="MOCKUP 1" src="" className="phone" />
-          <Ph label="MOCKUP 2" src="" className="phone" />
-          <Ph label="MOCKUP 3" src="" className="phone" />
-          <Ph label="MOCKUP 4" src="" className="phone" />
+          <Ph label="Empáticas — Inicio" src={img('empaticas/m1.jpg')} className="phone" pos="top" />
+          <Ph label="Empáticas — Quiénes somos" src={img('empaticas/m2.jpg')} className="phone" pos="top" />
+          <Ph label="Empáticas — El origen" src={img('empaticas/m3.jpg')} className="phone" pos="top" />
+          <Ph label="Empáticas — Aliados" src={img('empaticas/m4.jpg')} className="phone" pos="top" />
         </div>
       </div>
     </article>

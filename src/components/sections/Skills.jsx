@@ -4,20 +4,17 @@ export default function Skills() {
   return (
     <section className="skills darker" id="habilidades">
       <div className="decor" aria-hidden="true">
-        <Sticker kind="hr" anim={3} style={{ left: "3%", top: "5%", "--sz": "90px" }} />
-        <Sticker kind="dp" anim={2} style={{ right: "2%", top: "9%", "--sz": "135px" }} />
-        <Sticker kind="ch" anim={1} style={{ left: "4%", bottom: "5%", "--sz": "115px" }} />
-        <Sticker kind="sp" anim={5} style={{ right: "11%", bottom: "6%", "--sz": "60px" }} />
-        <Sticker kind="sr" anim={5} style={{ left: "50%", top: "3%", "--sz": "48px" }} />
-        <b className="bdg" style={{ left: "20%", top: "3%" }}>skills</b>
+        <Sticker kind="dp" style={{ right: "3%", top: "8%", "--sz": "120px" }} />
+        <Sticker kind="hr" style={{ left: "3%", bottom: "6%", "--sz": "90px" }} />
       </div>
       <div className="wrap">
+        <span className="tag">02 — Habilidades</span>
         <h2 className="rv">
           {"Habilidades y "}
           <em>cualidades</em>
         </h2>
         <div className="grid">
-          <article className="card light rv" style={{ background: "var(--vino)" }}>
+          <article className="card rv">
             <span className="ico" aria-hidden="true">✎</span>
             <h3>Diseño</h3>
             <ul>

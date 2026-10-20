@@ -1,14 +1,10 @@
 import { useEffect } from 'react';
 
-// Qué elementos aparecen con el scroll (el hero se queda con su animación de carga)
+// Aparición suave al hacer scroll: cada bloque sube un poco y se desvanece una sola vez.
+// El hero se queda con su propia animación de carga.
 const SELECTOR = [
-  'section:not(.hero2) :is(h2,h3,p,li,.tag,.script,.tagline,.ficha,.num,.seal,.pol,.ph,.card,.blk,.pill,.btn,blockquote,cite)',
-  'main .mq',
-  'main .belt',
+  'section:not(.hero2) :is(h2,.tag,.num,.tagline,.txt,.ficha,.roadmap,.card,.pol,.blk,.grid,.carw,.split,.social,.pindex,.mail-cta,.contact-photo,.script,.btn,ul,p)',
 ].join(',');
-const ZOOM = '.ph,.card,.blk,.pol,.seal,.num'; // entran con zoom
-const SIDE = 'p,li,.tagline,.ficha,blockquote'; // entran por los lados, alternando
-const CLASSES = ['reveal', 'is-visible', 'from-left', 'from-right', 'zoom'];
 
 export default function useScrollReveal() {
   useEffect(() => {
@@ -25,7 +21,6 @@ export default function useScrollReveal() {
 
     const timers = [];
     const siblings = new Map();
-    let side = 0;
     root.classList.add('js-reveal');
 
     const io = new IntersectionObserver(
@@ -36,19 +31,17 @@ export default function useScrollReveal() {
           io.unobserve(el);
           el.classList.add('is-visible');
           // al terminar, el elemento vuelve a su CSS normal (hover, etc.)
-          timers.push(setTimeout(() => el.classList.remove(...CLASSES), 1700));
+          timers.push(setTimeout(() => el.classList.remove('reveal', 'is-visible'), 1200));
         });
       },
-      { threshold: 0.12, rootMargin: '0px 0px -6% 0px' }
+      { threshold: 0.1, rootMargin: '0px 0px -5% 0px' }
     );
 
     els.forEach((el) => {
       const k = siblings.get(el.parentElement) || 0;
       siblings.set(el.parentElement, k + 1);
-      el.style.setProperty('--d', `${Math.min(k, 5) * 0.09}s`); // escalonado
+      el.style.setProperty('--d', `${Math.min(k, 4) * 0.06}s`); // escalonado corto
       el.classList.add('reveal');
-      if (el.matches(ZOOM)) el.classList.add('zoom');
-      else if (el.matches(SIDE)) el.classList.add(side++ % 2 ? 'from-left' : 'from-right');
       io.observe(el);
     });
 
@@ -56,7 +49,7 @@ export default function useScrollReveal() {
       io.disconnect();
       timers.forEach(clearTimeout);
       root.classList.remove('js-reveal');
-      els.forEach((el) => { el.classList.remove(...CLASSES); el.style.removeProperty('--d'); });
+      els.forEach((el) => { el.classList.remove('reveal', 'is-visible'); el.style.removeProperty('--d'); });
     };
   }, []);
 }
