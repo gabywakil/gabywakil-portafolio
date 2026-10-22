@@ -1,9 +1,18 @@
 import Ph from '../../ui/Ph';
 import { img } from '../../../utils/img';
 
-// Para mostrar los posts: guarda las imágenes en public/img/gw-studios/ como post-1.jpg … post-9.jpg
-// Mientras no existan, cada espacio muestra su etiqueta.
-const POSTS = Array.from({ length: 9 }, (_, i) => i + 1);
+// Posts del perfil de Instagram (public/img/gw-studios/post-1.jpg … post-9.jpg)
+const POSTS = [
+  'Tepuy Race — Caso 01',
+  'Foodik — Caso 02',
+  'Em-páticas — Carta n.º 03',
+  'Empáticas, propuesta comercial — Caso 04',
+  'LumoBot — Caso 05',
+  'By Alexandra Fernández — Acompáñame elaborando',
+  'Contenido que conecta — Caso 11',
+  'Otros proyectos — Moodboard',
+  'Fin del moodboard — ¿La próxima es la tuya?',
+];
 const SERVICES = ['Branding e identidad visual', 'Diseño y desarrollo web', 'Diseño para redes sociales', 'Contenido visual con IA'];
 
 export default function ProjectGWStudios() {
@@ -31,8 +40,8 @@ export default function ProjectGWStudios() {
             <div><b>gw.studios_</b><span>Diseño · Web · Contenido</span></div>
           </div>
           <div className="ig-grid">
-            {POSTS.map((n) => (
-              <Ph key={n} label={`Post ${n}`} src={img(`gw-studios/post-${n}.jpg`)} alt={`GW Studios — Post ${n}`} className="sq" />
+            {POSTS.map((t, i) => (
+              <Ph key={t} label={t} src={img(`gw-studios/post-${i + 1}.jpg`)} alt={`GW Studios — ${t}`} className="post" pos="top" />
             ))}
           </div>
         </div>

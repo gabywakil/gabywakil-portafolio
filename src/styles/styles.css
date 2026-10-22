@@ -560,3 +560,4 @@ footer.foot{padding:1.4rem var(--pad) 1.6rem}
 .ig-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;border-radius:14px;overflow:hidden}
 .ig-grid .ph{border-radius:0;background:var(--parchment)}
 .ig-grid .ph figcaption{font-size:.62rem}
+.ig-grid .post{aspect-ratio:4/5}
